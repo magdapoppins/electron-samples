@@ -7,9 +7,13 @@ app.on('ready', _=> {
     const tray = new Tray(path.join('src', 'Findus.jpg'))
     const contextMenu = Menu.buildFromTemplate([
         {
-            label: 'Label',
+            label: 'One',
+            click: _=> console.log("Menu up!")
+        }, {
+            label: 'Two',
             click: _=> console.log("Menu up!")
         }
     ])
     tray.setContextMenu(contextMenu)
+    tray.setToolTip('Open the fabulous app!')
 })
