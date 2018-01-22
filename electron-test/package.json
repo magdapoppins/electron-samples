@@ -1,0 +1,14 @@
+{
+  "name": "electron-test",
+  "version": "1.0.0",
+  "description": "Intro tutorial to ElectronJS.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron-prebuilt": "^1.4.13"
+  }
+}
