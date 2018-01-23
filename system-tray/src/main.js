@@ -4,7 +4,7 @@ const {Tray, app, Menu} = electron
 const path = require('path')
 
 app.on('ready', _=> {
-    const tray = new Tray(path.join('src', 'Findus.jpg'))
+    const tray = new Tray(path.join('src', 'lamp.png'))
     const contextMenu = Menu.buildFromTemplate([
         {
             label: 'One',
