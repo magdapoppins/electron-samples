@@ -19,6 +19,10 @@ function checkGitStatus(dir){
         console.log("err", err)
         console.log("stdout", stdout)
         console.log("stderr", stderr)
+
+        if (err) return setStatus('unknown')
+        if (/nothing to commit/.test(stdout)) return setStatus('clean')
+        return setStatus('dirty')
     })
 }
 
@@ -26,6 +30,16 @@ function formatDir(dir) {
     return /^~/.test(dir)
     ? os.homedir() + dir.substr(1).trim()
     : dir.trim()
+}
+
+function removeStatus(){
+    const el = document.getElementById("status")
+    el.classList.remove('unknown', 'clean', 'dirty')
+    return el
+}
+function setStatus(status){
+    removeStatus()
+    el.classList.add(status)
 }
 
 let timer
