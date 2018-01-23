@@ -20,6 +20,6 @@ app.on('ready', _=> {
 
     globalShortcut.register('Ctrl+Alt+D', _ => {
         //console.log('Got shortcut!') // Works!
-        mainWindow.webContents.send('capture')
+        mainWindow.webContents.send('capture', app.getPath('pictures'))
     })
 })
