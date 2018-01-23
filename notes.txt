@@ -1,0 +1,10 @@
+List of useful modules:
+> clipboard module
+> globalShortcut module
+> Tray module
+> Menu module
+
+
+    // Note to self: as in let result = (condition) ? (value1) : (value2), 
+    // If (condition), do (value1), else do (value2)
+    // If stack length is bigger than the stack size definition, add item to stack -1, else add item to stack 
