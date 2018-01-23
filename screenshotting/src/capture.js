@@ -6,6 +6,7 @@ const fs = require('fs')
 function getMainSource(desktopCapturer, screen, done) {
     const options = {types: ['screen'], thumbnailSize: screen.getPrimaryDisplay().workAreaSize}
     // The desktopcapturer is able to take in all kinds of different sources, but now we only want screen
+    // Similar API's are also available for capturing audio and video
     desktopCapturer.getSources(options, (err, sources) => {
         if (err) return console.log('Cannot capture screen:', err)
 
